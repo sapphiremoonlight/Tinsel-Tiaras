@@ -342,7 +342,7 @@ footer {
 
 /* ============================================== 
 			
-			📱 MOBILE RESPONSIVE 📱 
+		📱 TABLET MOBILE RESPONSIVE 📱 
 
 ============================================== */
 
@@ -374,10 +374,20 @@ footer {
     }
 }
 
-/* For very small screens (480px or less) */
+
+/* ============================================== 
+			
+		📱 PHONE MOBILE RESPONSIVE 📱 
+
+============================================== */
+
+
 @media screen and (max-width: 480px) {
     .navbar {
-        padding: 10px;
+        
+  	flex-direction: row; /* Keep items next to each other */
+        flex-wrap: wrap; /* Allow wrapping if items take too much space */
+       	padding: 10px;
     }
 
     .nav-links {
@@ -387,12 +397,12 @@ footer {
     }
 
     .nav-links li {
-        margin: 0 10px; /* Add some margin for spacing */
+        margin: 0 5px; /* Add some margin for spacing */
     }
 
   .nav-links a i {
-        font-size: 22px; /* Smaller icons for tablet screens */
-	margin: 2px 0;
+        font-size: 20px; /* Smaller icons for tablet screens */
+	margin: -0.5px; /* top right bottom left */
     }
 
     .navbar .logo {
