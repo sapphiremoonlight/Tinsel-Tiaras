@@ -1,14 +1,25 @@
-// Falling snow
-function createSnowflake() {
-  const snowflake = document.createElement("div");
-  snowflake.classList.add("snowflake");
-  snowflake.textContent = "❄";
-  snowflake.style.left = Math.random() * 100 + "vw";
-  snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  document.body.appendChild(snowflake);
-  setTimeout(() => snowflake.remove(), 5000);
-}
-setInterval(createSnowflake, 200);
+	// ❄️ SNOW TRAIL 
+	document.addEventListener("mousemove", (e) => {
+    const snow = document.createElement("div");
+    snow.textContent = "❄️";
+    snow.style.position = "absolute";
+    snow.style.left = e.pageX + "px";
+    snow.style.top = e.pageY + "px";
+    snow.style.pointerEvents = "none";
+    snow.style.fontSize = "1rem";
+    snow.style.opacity = 0.8;
+    snow.style.zIndex = 9999;
+    snow.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+    document.body.appendChild(snow);
+
+    setTimeout(() => {
+      snow.style.transform = "translateY(20px)";
+      snow.style.opacity = 0;
+    }, 10);
+
+    setTimeout(() => snow.remove(), 1000);
+  });
+
 
 // Message modal
 const previews = document.querySelectorAll(".message-preview");
@@ -31,28 +42,6 @@ function closeModal() {
 }
 window.addEventListener("click", (e) => {
   if (e.target === modal) closeModal();
-});
-
-// Snow trail
-document.addEventListener("mousemove", (e) => {
-  const snow = document.createElement("div");
-  snow.textContent = "❄️";
-  snow.style.position = "absolute";
-  snow.style.left = e.pageX + "px";
-  snow.style.top = e.pageY + "px";
-  snow.style.pointerEvents = "none";
-  snow.style.fontSize = "1rem";
-  snow.style.opacity = 0.8;
-  snow.style.zIndex = 9999;
-  snow.style.transition = "transform 1s ease-out, opacity 1s ease-out";
-  document.body.appendChild(snow);
-
-  setTimeout(() => {
-    snow.style.transform = "translateY(20px)";
-    snow.style.opacity = 0;
-  }, 10);
-
-  setTimeout(() => snow.remove(), 1000);
 });
 
 // Envelope animation
