@@ -205,8 +205,8 @@ body.young-adults-page .hero {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 40px;
-    padding: 40px;
+    margin-top: 20px;
+    padding: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -228,7 +228,7 @@ body.young-adults-page .hero {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     overflow: hidden; /* Hide overflow to keep card consistent */
-    width: 250px; /* Fixed width */
+    width: 300px; /* Fixed width */
     height: 350px; /* Fixed height */
     display: flex;
     flex-direction: column;
@@ -242,14 +242,13 @@ body.young-adults-page .hero {
 
 .moodboard-card img {
     width: 100%;
-    height: 200px; /* Fixed height for image */
-    object-fit: cover; /* Ensures images cover the area without distortion */
+    height: 250px; /* Fixed height for image */
+    object-fit: cover; 
     border-radius: 8px;
-    margin-bottom: 15px;
 }
 
 .moodboard-card p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #2a3d2f;
     font-weight: 600;
     text-transform: uppercase;
@@ -258,7 +257,7 @@ body.young-adults-page .hero {
 
 /* Optional: Hover effect for text */
 .moodboard-card:hover p {
-    color: #d4f1c7; /* Light mint green on hover */
+    color: #a5ce92; /* Light mint green on hover */
     transition: color 0.3s ease;
 }
 
@@ -266,6 +265,7 @@ body.young-adults-page .hero {
 .moodboard-card {
     border: 2px solid #a9cba7; /* Light green border */
 }
+
 /* ============================================== 
 			
 			📋 DESCRIPTION SECTION 📋 
@@ -384,8 +384,7 @@ footer {
 
 @media screen and (max-width: 480px) {
     .navbar {
-        
-  	flex-direction: row; /* Keep items next to each other */
+       	flex-direction: row; /* Keep items next to each other */
         flex-wrap: wrap; /* Allow wrapping if items take too much space */
        	padding: 10px;
     }
@@ -401,7 +400,7 @@ footer {
     }
 
   .nav-links a i {
-        font-size: 20px; /* Smaller icons for tablet screens */
+        font-size: 18.5px; /* Smaller icons for tablet screens */
 	margin: -0.5px; /* top right bottom left */
     }
 
@@ -436,7 +435,7 @@ footer {
 
     .moodboard-card img {
         height: 150px; /* Adjust image height for smaller screens */
-        margin-bottom: 5px; /* Reduce space between image and text */
+        margin-bottom: 3px; /* Reduce space between image and text */
     }
 
     .moodboard-card p {
@@ -444,4 +443,13 @@ footer {
         margin-top: 0; /* Remove top margin */
     }
 
+.countdown-time {
+    font-size: 2.5rem;  /* much smaller font size */
+    padding: 10px;      /* less padding */
+    margin: 0 4px;
+    letter-spacing: 1.5px;
+  }
+  .countdown-timer h2 {
+    font-size: 1.2rem; /* smaller heading */
+  }
 }
