@@ -6,7 +6,7 @@ Celebrate the festive season with **Tinsel & Tiara**, a cozy and interactive hol
 
 ## 🌟 Live Preview
 
-[🔗 Deployed Site (if available)](https://your-deployment-link.com)
+[🔗 Deployed Site]([https://your-deployment-link.com](https://sapphiremoonlight.github.io/Tinsel-Tiaras/))
 
 ---
 
