@@ -1,0 +1,437 @@
+/* ============================================== 
+
+				🎨 RESET STYLES 🎨 
+
+============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif; /* Clean and modern font */
+    background-color: #f0f5f3; /* Light green background for contrast */
+    color: #2a3d2f; /* Dark green text color */
+    line-height: 1.6;
+}
+
+/* ============================================== 
+
+					🌐 NAVBAR 🌐
+
+ ============================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #a9cba7; /* Soft green background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 18px;
+}
+
+.navbar .logo img {
+    max-width: 100px; /* Adjust the max width based on your logo's size */
+    height: auto;     /* Keep the aspect ratio intact */
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2a3d2f;
+    transition: color 0.3s ease;
+}
+
+.nav-links a i {
+    font-size: 30px; /* Adjust this value as needed */
+    transition: transform 0.3s ease; /* Smooth transition effect for hover */
+}
+
+.nav-links a:hover i {
+    transform: scale(1.2); /* Slightly increase the size of icons on hover */
+}
+
+.nav-links a:hover {
+    color: #d4f1c7; /* Light mint green on hover */
+}
+
+/* ============================================== 
+
+			🎄 HERO SECTION 🎄 
+
+============================================== */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    background: url('https://i.pinimg.com/1200x/ec/2c/1b/ec2c1b0655ed486b971149fc8f4661d9.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #a9cba7;
+}
+
+.icon-container {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.5s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.intro-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.intro-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.3); /* Light white background with 20% opacity */
+    padding: 10px; /* Add some padding to make it stand out */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+/* ============================================== 
+
+			🎉 HERO SECTION FOR KIDS 🎉 
+
+============================================== */
+
+body.kids-page .hero {
+    background: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190924-halloween-disney-costumes-1569364509.png') no-repeat center center/cover; /* New background */
+    /* Adjust any other styles specific to Kids page Hero */
+}
+
+/* ============================================== 
+
+	🎉 HERO SECTION FOR YOUNG ADULTS 🎉 
+
+============================================== */
+
+body.young-adults-page .hero {
+    background: url('https://th.bing.com/th/id/R.f302e46181b4bccde68ccc5597deebe5?rik=Sb1pTnojL6FkIA&pid=ImgRaw&r=0') no-repeat center center/cover;
+}
+
+
+/* ============================================== 
+
+			🃏 THEME SELECTION CARDS 🃏 
+
+============================================== */
+
+.themes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.theme-card {
+    background-color: #d9e5c3; /* Light green card color */
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.theme-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.theme-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.theme-card h2 {
+    font-size: 1.5rem;
+    color: #2a3d2f;
+    margin-bottom: 10px;
+}
+
+.theme-card p {
+    font-size: 1rem;
+    color: #3e4c35;
+}
+
+/* ============================================== 
+
+			🎨 MOODBOARD SECTION 🎨 
+
+============================================== */
+.moodboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.moodboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.moodboard-card {
+    background-color: #d9e5c3; /* Light green background for consistency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden; /* Hide overflow to keep card consistent */
+    width: 250px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.moodboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.moodboard-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for image */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.moodboard-card p {
+    font-size: 1.1rem;
+    color: #2a3d2f;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Optional: Hover effect for text */
+.moodboard-card:hover p {
+    color: #d4f1c7; /* Light mint green on hover */
+    transition: color 0.3s ease;
+}
+
+/* Add a border on the card for more definition */
+.moodboard-card {
+    border: 2px solid #a9cba7; /* Light green border */
+}
+/* ============================================== 
+			
+			📋 DESCRIPTION SECTION 📋 
+
+============================================== */
+
+.description {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    border-top: 3px solid #a9cba7;
+}
+
+.description-content h2 {
+    font-size: 2rem;
+    color: #2a3d2f;
+    margin-bottom: 20px;
+}
+
+.description-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* ============================================== 
+
+			⏳ COUNTDOWN SECTION ⏳
+
+============================================== */
+.countdown {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.countdown-timer h2 {
+    font-size: 2rem;
+    color: #2a3d2f;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Countdown Time Styling */
+.countdown-time {
+    font-size: 6rem;  /* Size the numbers like a lockscreen */
+    font-weight: 700;
+    color: #2a3d2f;
+    margin: 0 10px;
+    display: inline-block;
+    letter-spacing: 3px;
+    background-color: rgba(255, 255, 255, 0.6); /* Slight background to make it stand out */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-time:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* ============================================== 
+
+					🦶 FOOTER 🦶 
+
+============================================== */
+
+footer {
+    background-color: #a9cba7;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+/* ============================================== 
+			
+			📱 MOBILE RESPONSIVE 📱 
+
+============================================== */
+
+/* Navbar - Update for smaller screens */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row; /* Keep items next to each other */
+        flex-wrap: wrap; /* Allow wrapping if items take too much space */
+        justify-content: space-between; /* Space out items */
+        padding: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around; /* Evenly space out items */
+        width: 100%; /* Ensure the nav items take up full width */
+    }
+
+    .nav-links li {
+        list-style-type: none;
+    }
+
+  .nav-links a i {
+        font-size: 24px; /* Smaller icons for tablet screens */
+    }
+
+    .countdown-time {
+        font-size: 5rem; /* Slightly smaller for tablets */
+    }
+}
+
+/* For very small screens (480px or less) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: row; /* Ensure items are side by side */
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Add some margin for spacing */
+    }
+
+  .nav-links a i {
+        font-size: 22px; /* Smaller icons for tablet screens */
+	margin: 2px 0;
+    }
+
+    .navbar .logo {
+        font-size: 14px; /* Reduce logo size for smaller screens */
+    }
+
+	.nav-links a {
+        font-size: 16px;
+    }
+
+    .countdown-time {
+        font-size: 4rem; /* Smaller for mobile */
+    }
+
+ /* Moodboard Section */
+.moodboard {
+        flex-direction: column; /* Stack moodboard items vertically */
+        gap: 20px; /* Reduced gap between items */
+    }
+
+    .moodboard-grid {
+        grid-template-columns: 1fr; /* Two columns for mobile */
+    }
+
+  .moodboard-card {
+    width: 90%; /* Make the cards take up 90% of the available width */
+    max-width: 45rem; /* Max width set using rem (about 640px) */
+    height: 30vh; /* Height relative to the viewport height (20% of the viewport height) */
+    margin: 10px auto; /* Center the cards */
+}
+
+    .moodboard-card img {
+        height: 150px; /* Adjust image height for smaller screens */
+        margin-bottom: 5px; /* Reduce space between image and text */
+    }
+
+    .moodboard-card p {
+        font-size: 1rem; /* Smaller text in moodboard card */
+        margin-top: 0; /* Remove top margin */
+    }
+
+}
