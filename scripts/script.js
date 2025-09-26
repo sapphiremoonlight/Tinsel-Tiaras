@@ -45,33 +45,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Download All Button functionality
   zipBtn.addEventListener('click', async () => {
-  zipBtn.disabled = true;
-  zipBtn.textContent = 'Preparing...';
+    zipBtn.disabled = true;
+    zipBtn.textContent = 'Preparing...';
 
-  const JSZip = window.JSZip;
-  const zip = new JSZip();
-  const folder = zip.folder('christmas-tree-gallery');
-
-  let successCount = 0;
-  let failCount = 0;
-
-  for (const img of images) {
-    const url = img.src;
-    const filename = sanitizeFilename(img.alt || 'image') + getExtension(url);
+    const JSZip = window.JSZip;
+    const zip = new JSZip();
+    const folder = zip.folder('christmas-tree-gallery');
 
     try {
-      const blob = await fetch(url).then(res => {
-        if (!res.ok) throw new Error(`Fetch failed with status ${res.status}`);
-        return res.blob();
-      });
+      for (const img of images) {
+        const url = img.src;
+        const filename = sanitizeFilename(img.alt || 'image') + getExtension(url);
 
-      folder.file(filename, blob);
-      successCount++;
+        const blob = await fetch(url).then(res => {
+          if (!res.ok) throw new Error(Failed to fetch ${url});
+          return res.blob();
+        });
+
+        folder.file(filename, blob);
+      }
+
+      const content = await zip.generateAsync({ type: 'blob' });
+
+      // Trigger download
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(content);
+      link.download = 'christmas-tree-gallery.zip';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
     } catch (error) {
-      console.warn(`Skipping image "${filename}": ${error.message}`);
-      failCount++;
+      alert('Error downloading images: ' + error.message);
+    } finally {
+      zipBtn.disabled = false;
+      zipBtn.textContent = 'Download All';
     }
+  });
+
+  // Helper to download a single image
+  function downloadImage(url, name) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = sanitizeFilename(name) + getExtension(url);
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
   }
+
+  // Helper to get extension from URL
+  function getExtension(url) {
+    const match = url.match(/\.(jpg|jpeg|png|gif|webp|bmp|svg)(\?|$)/i);
+    return match ? match[0] : '.jpg';
+  }
+
+  // Sanitize filename to remove invalid characters
+  function sanitizeFilename(name) {
+    return name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+  }
+});
 
   if (successCount === 0) {
     alert('Download failed. All image fetches failed due to CORS or network errors.');
