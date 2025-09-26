@@ -3,7 +3,7 @@
 ------------------------------------🎁🎄🎅 */
 @font-face {
   font-family: 'Santas Air Mail';
-  src: url('../fonts/Santas-Air-Mail.ttf') format('truetype');
+  src: url('../fonts/santas-air-mail.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -75,34 +75,29 @@ header {
   margin-right: 1rem;
 }
 
-* ❄️------------------------------------  
-          	SNOWFLAKES  
-------------------------------------❄️ */
-
-.snowflake {
-  position: fixed;
-  top: -10px;
-  font-size: 1.5rem;
-  color: white;
-  user-select: none;
-  pointer-events: none;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(100vh); opacity: 0; }
-}
-
-
 /* 👣------------------------------------  
-          FOOTER & SNOWFLAKES  
+         	 FOOTER 
 ------------------------------------👣 */
 footer {
+   background: linear-gradient(90deg, #800000, #b30000); /* rich red gradient */
+  color: #fffaf7;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  border-top: 4px solid #922b21; /* darker top border */
   text-align: center;
-  font-size: 0.9rem;
-  padding: 1rem;
-  color: #666;
+  font-size: 1rem;
+  font-family: 'Mountains of Christmas', serif;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 10;
+}
+
+/* Optional: add a small snowflake or gift icon before the text */
+footer p::before {
+  content: "❄️ ";
+  margin-right: 0.4em;
+  font-size: 1.2rem;
+  vertical-align: middle;
 }
 
 /* 🦌 Footer Return Button */
@@ -112,8 +107,8 @@ footer {
 }
 
 .footer-return a {
-  background: #800000;
-  color: #fff;
+  background: #e4cddd;
+  color: #800000;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
@@ -123,7 +118,7 @@ footer {
 }
 
 .footer-return a:hover {
-  background: #a00000;
+  background: #ca99ab;
 }
 
 /* 💬📦------------------------------------  
@@ -197,7 +192,7 @@ footer {
 }
 .form-container iframe {
   width: 100%;
-  height: 600px;
+  height: 770px;
   border: none;
   border-radius: 8px;
 }
@@ -282,97 +277,3 @@ footer {
   transform: rotate(-2deg);
   text-shadow: 1px 1px #f00, -1px -1px #0f0;
 }
-
-/* 📱📐------------------------------------  
-        RESPONSIVE DESIGN  
-    Tablets & Mobile Phones  
-------------------------------------📐📱 */
-
-/* Tablets (iPads, 768px and below) */
-@media (max-width: 768px) {
-  body {
-    font-size: 3rem; /* Slightly smaller font */
-  }
-
-  header {
-    font-size: 2rem;
-    padding: 0.8rem;
-  }
-
-  .inbox {
-    padding: 0.5rem;
-    gap: 0.8rem;
-  }
-
-  .message-preview img {
-    width: 40px;
-    margin-right: 0.8rem;
-  }
-
-  .message-preview {
-    padding: 0.6rem;
-  }
-
-  .form-container {
-    max-width: 90%;
-    padding: 0.8rem;
-  }
-
-  .form-container iframe {
-    height: 400px; /* Reduce iframe height on tablets */
-  }
-
-  #elfModeBtn {
-    font-size: 1rem;
-    padding: 0.7rem 1.2rem;
-  }
-}
-
-/* Mobile Phones (480px and below) */
-@media (max-width: 480px) {
-  body {
-    font-size: 0.9rem; /* Smaller fonts for small screens */
-  }
-
-  header {
-    font-size: 1.2rem;
-    padding: 0.6rem;
-  }
-
-  h1, h2 {
-    font-size: 1.2rem;
-  }
-
-  .inbox {
-    padding: 0.3rem;
-    gap: 0.6rem;
-  }
-
-  .message-preview img {
-    width: 35px;
-    margin-right: 0.5rem;
-  }
-
-  .message-preview {
-    padding: 0.5rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .form-container {
-    max-width: 95%;
-    padding: 0.6rem;
-  }
-
-  .form-container iframe {
-    height: 300px; /* Even smaller iframe on phones */
-  }
-
-  #elfModeBtn {
-    font-size: 0.95rem;
-    padding: 0.6rem 1rem;
-  }
-}
-
-
-
