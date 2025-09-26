@@ -1,0 +1,498 @@
+/* ============================================== 
+                🎨 RESET STYLES 🎨 
+============================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #0c0c0c; /* Black background for Oscars theme */
+    color: #f1f1f1; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+/* ============================================== 
+                    🌐 NAVBAR 🌐
+ ============================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #333; /* Dark background for elegance */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    transition: color 0.3s ease;
+}
+
+.nav-links a i {
+    font-size: 30px; /* Adjust this value as needed */
+    transition: transform 0.3s ease; /* Smooth transition effect for hover */
+}
+
+.nav-links a:hover i {
+    transform: scale(1.2); /* Slightly increase the size of icons on hover */
+}
+
+.nav-links a:hover {
+    color: #ffcc00; /* Oscar gold on hover */
+}
+
+/* ============================================== 
+            🎥 HERO SECTION 🎥
+============================================== */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70vh;
+    background: url('https://i.pinimg.com/736x/26/9f/40/269f4004b058282b9bec69669b3a0ac0.jpg') no-repeat center center/cover; /* Oscars-like background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #ffcc00; /* Gold accent */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ============================================== 
+                ⏳ COUNTDOWN SECTION ⏳
+============================================== */
+
+.countdown {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.countdown-timer h2 {
+    font-size: 2rem;
+    color: #ffcc00; /* Gold for Oscars feel */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Countdown Time Styling */
+.countdown-time {
+    font-size: 6rem;
+    font-weight: 700;
+    color: #ffcc00; /* Gold text for countdown */
+    margin: 0 10px;
+    display: inline-block;
+    letter-spacing: 3px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-time:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* ============================================== 
+                🏆 TROPHY SHOWCASE 🏆
+============================================== */
+
+.trophy-showcase {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.trophy-card {
+    background-color: #334; /* Dark background for the trophy card */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trophy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.oscar-trophy {
+    font-size: 3rem;
+    color: #ffcc00; /* Gold trophy */
+    margin-bottom: 15px;
+}
+
+.trophy-card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffcc00; /* Gold text */
+}
+
+/* ============================================== 
+            
+      			🌟 	WALK OF FAME  🌟 
+
+============================================== */
+
+/* Walk of Fame Section */
+.walk-of-fame {
+    text-align: center; /* Center the entire section */
+    padding: 40px 0; /* Padding to give space around the content */
+}
+
+/* Content Inside Walk of Fame */
+.walk-of-fame-content {
+    margin-bottom: 30px; /* Space between the title & paragraph and the gallery */
+}
+
+.walk-of-fame-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffcc00; /* Oscar gold */
+    margin-bottom: 10px;
+}
+
+.walk-of-fame-content p {
+    font-size: 1.2rem;
+    color: #f1f1f1; /* Light color for the paragraph */
+    margin-bottom: 40px; /* Space before the grid */
+}
+
+/* Hall of Fame Grid */
+.walk-of-fame-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between the images */
+    justify-items: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+    margin: 0 auto; /* Center the gallery */
+    max-width: 1200px; /* Limit the width */
+}
+
+/* Hall of Fame Card - Removed background and extra padding */
+.walk-of-fame-card {
+    padding: 0; /* Removed padding to avoid extra spacing */
+    width: 240px; /* Consistent card width */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Keeps the card shadow for depth */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.walk-of-fame-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Star Image Styling */
+.star-image {
+    width: 100%; /* Make the image span the entire width of the card */
+    height: auto; /* Ensure proper aspect ratio */
+    border-radius: 10px; /* Round the corners of the image */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    margin-bottom: 10px; /* Space between image and potential content */
+}
+
+/* Optional: Adjust the image box shadow when hovering */
+.walk-of-fame-card:hover .star-image {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================== 
+                🎨 DESCRIPTION SECTION 🎨
+============================================== */
+
+.description {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text inside */
+    padding: 40px 20px; /* Space around the content */
+    background-color: #0c0c0c; /* Optional: make the background dark */
+}
+
+.description-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffcc00; /* Gold color for the heading */
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.description-content p {
+    font-size: 1.2rem;
+    color: #f1f1f1; /* Light text for contrast */
+    line-height: 1.6; /* Add line height for readability */
+    max-width: 800px; /* Limit the width of the paragraph for better readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* ============================================== 
+            
+            🎨 MOODBOARD SECTION 🎨 
+
+============================================== */
+
+.moodboard {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.moodboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.moodboard-card {
+    background-color: #d9e5c3; /* Light green background for consistency */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden; /* Hide overflow to keep card consistent */
+    width: 250px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.moodboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.moodboard-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for image */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.moodboard-card p {
+    font-size: 1.1rem;
+    color: #2a3d2f;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.moodboard-card:hover p {
+    color: #d4f1c7; /* Light mint green on hover */
+    transition: color 0.3s ease;
+}
+
+/* Add a border on the card for more definition */
+.moodboard-card {
+    border: 2px solid #a9cba7; /* Light green border */
+}
+
+/* ============================================== 
+                    🧑‍🎄 FOOTER 🧑‍🎄
+============================================== */
+
+footer {
+    background-color: #333;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* ============================ 
+           
+ 	📱 MOBILE RESPONSIVE 📱
+
+============================ */
+
+@media screen and (max-width: 768px) {
+    
+/* Hide the navbar in the header on mobile */
+    .navbar {
+        display: none; /* Remove the navbar from the header */
+    }
+
+/* Hide the original footer content */
+    footer p {
+        display: none; /* Hide the original footer text */
+    }
+
+    /* Style the footer navigation */
+    footer .nav-links {
+        display: flex;
+        justify-content: center; /* Center the nav items */
+        align-items: center;
+        width: 100%; /* Ensure full width */
+        gap: 20px; /* Adjust space between items */
+        margin-top: 20px; /* Space above the nav in footer */
+    }
+
+    footer .nav-links a {
+        font-size: 16px; /* Smaller font size for mobile */
+        color: #f1f1f1;
+        text-decoration: none;
+    }
+
+    footer .nav-links a:hover {
+        color: #ffcc00; /* Oscar gold on hover */
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 50vh; /* Reduce height for smaller screens */
+        background-size: cover; /* Ensure the background image scales well */
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller heading */
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust paragraph size */
+    }
+
+    /* Countdown Section */
+    .countdown-timer h2 {
+        font-size: 1.5rem; /* Smaller font for countdown title */
+    }
+
+    .countdown-time {
+        font-size: 4rem; /* Smaller countdown numbers */
+        padding: 15px;  /* Reduce padding */
+    }
+
+    /* Trophy Showcase */
+    .trophy-showcase {
+        flex-direction: column; /* Stack cards vertically */
+        padding: 20px;
+    }
+
+    .trophy-card {
+        width: 90%; /* Make cards take more width */
+        max-width: 300px; /* Limit the max width */
+        margin: 10px 0;   /* Add vertical spacing */al
+	align-items: center;
+    }
+
+    .oscar-trophy {
+        font-size: 2.5rem; /* Smaller trophy icon */
+    }
+
+    .trophy-card p {
+        font-size: 1rem; /* Smaller text in the trophy card */
+    }
+
+    /* Walk of Fame Section */
+    .walk-of-fame-gallery {
+        grid-template-columns: 1fr 1fr; /* Two columns on mobile */
+    }
+
+    .walk-of-fame-content h2 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .walk-of-fame-content p {
+        font-size: 1rem; /* Smaller paragraph */
+    }
+
+    /* Hall of Fame Card */
+    .walk-of-fame-card {
+        width: 100%; /* Full width for cards */
+        padding: 0;
+    }
+
+    /* Moodboard Section */
+.moodboard {
+        flex-direction: column; /* Stack moodboard items vertically */
+        gap: 20px; /* Reduced gap between items */
+    }
+
+    .moodboard-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns for mobile */
+    }
+
+  .moodboard-card {
+    width: 90%; /* Make the cards take up 90% of the available width */
+    max-width: 45rem; /* Max width set using rem (about 640px) */
+    height: 30vh; /* Height relative to the viewport height (20% of the viewport height) */
+    margin: 10px auto; /* Center the cards */
+}
+
+    .moodboard-card img {
+        height: 150px; /* Adjust image height for smaller screens */
+        margin-bottom: 5px; /* Reduce space between image and text */
+    }
+
+    .moodboard-card p {
+        font-size: 1rem; /* Smaller text in moodboard card */
+        margin-top: 0; /* Remove top margin */
+    }
+
+    /* Description Section */
+    .description-content h2 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    .description-content p {
+        font-size: 1rem; /* Adjust text size for better readability */
+    }
+    
+    /* Footer Adjustments */
+    footer p {
+        font-size: 0.9rem; /* Slightly smaller footer text */
+    }
+}
