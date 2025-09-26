@@ -1,0 +1,270 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f0f5f3; /* Light green background for the gallery */
+    color: #2a3d2f;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #a9cba7; /* Light green navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2a3d2f;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2a3d2f;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d4f1c7; /* Light mint green on hover */
+}
+
+/* Gallery Page */
+.gallery-page {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gallery-page h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2a3d2f;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Page */
+.gallery-page {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.gallery-page h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2a3d2f;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-page p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.gallery-page button#downloadAll {
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: #2a3d2f;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#downloadAll:hover {
+    background-color: #d4f1c7; /* Light mint green on hover */
+}
+
+/* Preview Overlay Styles */
+.image-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: zoom-out;
+}
+
+.image-preview.hidden {
+  display: none;
+}
+
+.image-preview img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.8);
+  cursor: default;
+}
+
+/* Close button */
+#closePreview {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+#closePreview:hover {
+  color: #f44336; /* red on hover */
+}
+
+
+/* Tree Gallery */
+.tree-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Star Row */
+.tree-row.star-row {
+    margin-bottom: 20px;
+}
+
+.star {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    animation: starAnimation 3s ease-in-out infinite;
+}
+
+@keyframes starAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tree Rows (Tiers) */
+.tree-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tree-row img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.tree-row img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablet Screens */
+@media screen and (max-width: 768px) {
+    .tree-row img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .gallery-page h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .tree-row {
+        gap: 15px;
+    }
+
+    .star {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Mobile Screens */
+@media screen and (max-width: 480px) {
+    . .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tree-gallery {
+        gap: 10px;
+    }
+
+    .tree-row {
+        flex-wrap: wrap; /* Allow images to wrap if they overflow */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .tree-row img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .star {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gallery-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-page p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
