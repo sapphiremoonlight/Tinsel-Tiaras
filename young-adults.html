@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Adults Christmas Moodboard</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="young-adults-page">
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Christmas Family Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i></a></li>
+                <li><a href="snow.html"><i class="fas fa-snowflake"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Unique background for Young Adults page) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Young Adults Christmas Party</h1>
+            <p>It's time to celebrate in style with themed outfits and festive fun!</p>
+        </div>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section class="countdown">
+        <div class="countdown-timer">
+            <h2>Countdown to Christmas!</h2>
+            <div id="countdown"></div>
+        </div>
+    </section>
+
+    <!-- Moodboard Grid Section -->
+    <section class="moodboard">
+        <div class="moodboard-grid">
+            <!-- Example Cards for Moodboard -->
+            <div class="moodboard-card">
+                <img src="https://th.bing.com/th/id/R.2c102f001631822516559fc78c9d1167?rik=J3kS3cEmtQt%2bsA&pid=ImgRaw&r=0" alt="Squid Game">
+                <p>Squid Game</p>
+            </div>
+            <div class="moodboard-card">
+                <img src="https://harkinsmedia.harkins.com/media/images/default-source/adspace-assets/homepage-event-ads/mk24-274a-wicked-movie-party_events-series-homepage-ad---character-716x896_v6.png?sfvrsn=c7b4564_1" alt="Example Image">
+                <p>Wicked</p>
+            </div>
+            <div class="moodboard-card">
+                <img src="https://pngimg.com/uploads/naruto/naruto_PNG51.png" alt="Naruto">
+                <p>Naruto</p>
+            </div>
+        </div>
+<div class="moodboard-grid">
+            <!-- Example Cards for Moodboard -->
+            <div class="moodboard-card">
+                <img src="https://th.bing.com/th/id/R.2c102f001631822516559fc78c9d1167?rik=J3kS3cEmtQt%2bsA&pid=ImgRaw&r=0" alt="Squid Game">
+                <p>Squid Game</p>
+            </div>
+            <div class="moodboard-card">
+                <img src="https://harkinsmedia.harkins.com/media/images/default-source/adspace-assets/homepage-event-ads/mk24-274a-wicked-movie-party_events-series-homepage-ad---character-716x896_v6.png?sfvrsn=c7b4564_1" alt="Example Image">
+                <p>Wicked</p>
+            </div>
+            <div class="moodboard-card">
+                <img src="https://th.bing.com/th/id/R.3517d0ced1ca93b189afabcfb794390d?rik=Pz8NyfhCQgJ%2f9Q&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f13%2fSuper-Mario-Bros-PNG-Transparent-Picture.png&ehk=IDH4xM8Om9C9Qx1hwl7NMUKDg%2fLi7cAlkoHAhKQtefM%3d&risl=1&pid=ImgRaw&r=0" alt="Super Mario Bros.">
+                <p>Super Mario Bros.</p>
+            </div>
+        </div>
+    
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Christmas Party for Young Adults</p>
+    </footer>
+
+    <script>
+        // Countdown Timer JavaScript (Counts down to Christmas)
+        function startCountdown() {
+            var christmasDate = new Date("Dec 25, 2025 00:00:00").getTime();
+            var countdownInterval = setInterval(function() {
+                var currentTime = new Date().getTime();
+                var timeLeft = christmasDate - currentTime;
+
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = 
+                    `<span class="countdown-time">${days}</span>d 
+                    <span class="countdown-time">${hours}</span>h 
+                    <span class="countdown-time">${minutes}</span>m 
+                    <span class="countdown-time">${seconds}</span>s`;
+
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown").innerHTML = "Merry Christmas!";
+                }
+            }, 1000);
+        }
+        startCountdown();
+    </script>
+</body>
+</html>

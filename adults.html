@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adults Oscars Christmas Party</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/oscars.css">
+</head>
+<body class="adults-page">
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo-dark.png" alt="Christmas Family Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i></a></li>
+                <li><a href="snow.html"><i class="fas fa-snowflake"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <!-- Hero Section (Oscar Theme) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Oscars Themed Christmas Party</h1>
+            <p>Celebrate the festive season like a Hollywood star!</p>
+        </div>
+    </section>
+
+    <!-- Oscar Countdown Section -->
+    <section class="countdown">
+        <div class="countdown-timer">
+            <h2>Countdown to the Oscars Night!</h2>
+            <div id="countdown"></div>
+        </div>
+    </section>
+
+    <!-- Oscar Trophy Showcase -->
+    <section class="trophy-showcase">
+        <div class="trophy-card">
+            <i class="fas fa-trophy oscar-trophy"></i>
+            <p>Best Christmas Outfit</p>
+        </div>
+        <div class="trophy-card">
+            <i class="fas fa-trophy oscar-trophy"></i>
+            <p>Most Festive Party Spirit</p>
+        </div>
+        <div class="trophy-card">
+            <i class="fas fa-trophy oscar-trophy"></i>
+            <p>Best Christmas Dance Performance</p>
+        </div>
+    </section>
+
+    <!-- Walk of Fame -->
+<section class="walk-of-fame">
+    <div class="walk-of-fame-content">
+        <h2>Walk of Fame</h2>
+        <p>Celebrating our shining stars!</p>
+    </div>
+    <div class="walk-of-fame-gallery">
+        <div class="walk-of-fame-card">
+            <img src="images/walk-of-fame/star1.png" alt="Star 1" class="star-image">
+        </div>
+        <div class="walk-of-fame-card">
+            <img src="images/walk-of-fame/star2.png" alt="Star 2" class="star-image">
+        </div>
+        <div class="walk-of-fame-card">
+            <img src="images/walk-of-fame/star3.png" alt="Star 3" class="star-image">
+        </div>
+    </div>
+</section>
+
+
+<!-- Description Section -->
+<section class="description">
+    <div class="description-content">
+        <h2>Dress Code & Theme Ideas</h2>
+        <p>For the Adults Oscars Christmas Party, get ready to shine like a Hollywood star! Whether you’re going for a dazzling red carpet look or a festive gold & black ensemble, the goal is to bring the glam and sparkle. Dress as if you’re attending the most elegant Christmas night of the year!</p>
+    </div>
+</section>
+
+<section class="moodboard">
+       <!-- Oscar-Themed Moodboard -->
+    <div class="moodboard-grid">
+        <!-- Oscar Themed Cards -->
+        <div class="moodboard-card">
+            <img src="images/oscars/ladies-1.png" alt="Women Outfit 1">
+            <p>Oscar Fit 1 (Ladies) </p>
+        </div>
+        <div class="moodboard-card">
+            <img src="images/oscars/ladies-2.png" alt="Women Outfit 2">
+            <p>Oscar Fit 2 (Ladies) </p>
+        </div>
+         <div class="moodboard-card">
+            <img src="images/oscars/ladies-3.png" alt="Women Outfit 3">
+            <p>Oscar Fit 3 (Ladies) </p>
+        </div>
+    </div>
+
+<div class="moodboard-grid">
+        <!-- Men Outfits -->
+       	<div class="moodboard-card">
+            <img src="images/oscars/men-4.png" alt="Men Outfit 1">
+            <p>Oscar Fit 1 (Gents) </p>
+        </div>
+        <div class="moodboard-card">
+            <img src="images/oscars/men-2.png" alt="Men Outfit 2">
+            <p>Oscar Fit 2 (Gents) </p>
+        </div>
+        <div class="moodboard-card">
+            <img src="images/oscars/men-3.png" alt="Men Outfit 3">
+            <p>Oscar Fit 3 (Gents) </p>
+        </div>
+    </div>
+
+</section>
+</main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Oscars Christmas Party</p>
+
+  <!-- Mobile Navigation Links (Displayed on Mobile) -->
+   <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="snow.html">Globe</a></li>
+     </ul>
+    </footer>
+
+    <script>
+        // Countdown Timer JavaScript (Counts down to the Oscars)
+        function startCountdown() {
+            var oscarDate = new Date("Dec 25, 2025 20:00:00").getTime();  // Set time for Oscars night
+            var countdownInterval = setInterval(function() {
+                var currentTime = new Date().getTime();
+                var timeLeft = oscarDate - currentTime;
+
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("countdown").innerHTML = 
+                    `<span class="countdown-time">${days}</span>d 
+                    <span class="countdown-time">${hours}</span>h 
+                    <span class="countdown-time">${minutes}</span>m 
+                    <span class="countdown-time">${seconds}</span>s`;
+
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    document.getElementById("countdown").innerHTML = "The Oscars are here!";
+                }
+            }, 1000);
+        }
+        startCountdown();
+    </script>
+</body>
+</html>
