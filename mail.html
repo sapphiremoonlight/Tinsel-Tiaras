@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎅 Santa's Archive</title>
+ <link rel="icon" href="images/bow.ico" type="image/x-icon">
+
+  <!-- External Styles -->
+  <link rel="stylesheet" href="styles/mail.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1 class="typing">
+      <img src="https://pngimg.com/uploads/elf/elf_PNG30.png" alt="Santa's Elf" class="h1-icon">
+      Santa's Archive
+      <img src="https://www.pngall.com/wp-content/uploads/5/Santa-Claus-Sleigh-PNG-Free-Image.png" alt="Sleigh" class="h1-icon">
+    </h1>
+  </header>
+
+  <main class="inbox">
+    <div class="message-preview" data-to="Mom" data-from="Ella 🎁" data-message="Merry Christmas Mom! Thank you for always making the holidays magical. Love you lots! 🎄❤">
+      <img src="images/christmas-tree.png" alt="tree icon">
+      <div>
+        <h3>To: Mom</h3>
+        <p>From: Ella 🎁</p>
+      </div>
+    </div>
+
+    <div class="message-preview" data-to="Dad" data-from="Chris ❄" data-message="Merry Christmas Dad! Thanks for all your support and corny jokes this year. You're the best! 🎅✨">
+      <img src="images/gifts.png" alt="gifts icon">
+      <div>
+        <h3>To: Dad</h3>
+        <p>From: Chris ❄</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Form Section -->
+  <div id="envelope" class="envelope">
+    <section class="form-container">
+      <div class="form-header">
+        <h2>🎁 Send a Message</h2>
+        <img src="images/stamp.png" alt="Holiday Stamp" class="stamp-icon">
+      </div>
+      <iframe src="https://forms.gle/zuc7SxXqf7VbVDVY8"></iframe>
+    </section>
+  </div>
+
+  <button id="elfModeBtn">🧝 Toggle Elf Mode</button>
+
+  <footer>
+    <p>Santa's Archive • Christmas 2025 🎁</p>
+   <div class="footer-return">
+  <a href="index.html">← Leave Santa's Archive</a>
+</div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">Message</div>
+      <div class="modal-body">
+        <h2 id="modal-to"></h2>
+        <p id="modal-from"></p>
+        <p id="modal-message"></p>
+        <button class="close-btn" onclick="closeModal()">
+          <i class="fas fa-heart"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/mail.js"></script>
+</body>
+</html>
