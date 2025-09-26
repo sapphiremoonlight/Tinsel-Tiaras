@@ -192,7 +192,7 @@ footer p::before {
 }
 .form-container iframe {
   width: 100%;
-  height: 770px;
+  height: 600px;
   border: none;
   border-radius: 8px;
 }
@@ -267,7 +267,6 @@ footer p::before {
   transform: scale(1.05);
 }
 
-
 /* Elf Mode */
 .elf-mode body {
   background: #fffbe6;
@@ -276,4 +275,110 @@ footer p::before {
 .elf-mode h1 {
   transform: rotate(-2deg);
   text-shadow: 1px 1px #f00, -1px -1px #0f0;
+}
+
+/* 📱📐------------------------------------  
+        RESPONSIVE DESIGN  
+ 		PHONE 
+------------------------------------📐📱 */
+
+/* 📱📏------------------------------------
+      RESPONSIVE DESIGN
+      Breakpoints: 768px and 480px
+------------------------------------📏📱 */
+
+/* ===== Tablet (max-width: 768px) ===== */
+@media (max-width: 768px) {
+  header {
+    font-size: 1.4rem;
+    padding: 0.8rem;
+  }
+
+  .inbox {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .message-preview {
+    padding: 0.6rem;
+  }
+
+  .message-preview img {
+    width: 40px;
+    margin-right: 0.6rem;
+  }
+
+  .form-container {
+    max-width: 90%;
+    margin: 1.5rem auto;
+    padding: 0.8rem;
+  }
+
+  .form-container iframe {
+    height: 500px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  #elfModeBtn {
+    margin: 1.5rem auto;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+/* ===== Mobile (max-width: 480px) ===== */
+@media (max-width: 480px) {
+  header {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+
+  .inbox {
+    padding: 0.6rem;
+    gap: 0.6rem;
+  }
+
+  .message-preview {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+  }
+
+  .message-preview img {
+    width: 35px;
+    margin: 0 0 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-container {
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 0.5rem;
+  }
+
+  .form-container iframe {
+    height: 400px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  #elfModeBtn {
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
 }
