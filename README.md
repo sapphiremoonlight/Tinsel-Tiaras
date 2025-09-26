@@ -17,11 +17,12 @@ Celebrate the festive season with **Tinsel & Tiara**, a cozy and interactive hol
 - 📥 Click any image to download it individually.
 - 📦 "Download All" button downloads all images as a ZIP file.
 - 🌐 Responsive design and clean layout.
-- 🖼️ Mix of local and external (Pinterest) images used.
+- 🖼️ Mix of local and external (Pinterest) images used. 
 
 
 - **❄️ Snowglobe: "All I Want for Christmas..."**  
-  An interactive snowglobe page (GIF) that lets users listen to ["All I want for Christmas"](../all-i-want-for-christmas.mp3) by Mariah Carey.
+  An interactive snowglobe page (GIF) that lets users listen to ([🎵 All I Want for Christmas](https://raw.githubusercontent.com/sapphiremoonlight/Tinsel-Tiaras/main/public/audio/all-i-want-for-christmas.mp3)
+) by Mariah Carey.
 
 - **🧑‍🎨 Themed Inspiration Pages**  
   Curated Christmas party and decor ideas for:
