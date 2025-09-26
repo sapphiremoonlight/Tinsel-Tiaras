@@ -13,11 +13,11 @@ Celebrate the festive season with **Tinsel & Tiara**, a cozy and interactive hol
 ## 📦 Features
 
 - **🎄 Christmas Tree Gallery**  
- - 🎁 Click any image to preview it in full size.
-- 📥 Click any image to download it individually.
-- 📦 "Download All" button downloads all images as a ZIP file.
-- 🌐 Responsive design and clean layout.
-- 🖼️ Mix of local and external (Pinterest) images used. 
+    - 🎁 Click any image to preview it in full size.
+    - 📥 Click any image to download it individually.
+    - 📦 "Download All" button downloads all images as a ZIP file.
+    - 🌐 Responsive design and clean layout.
+    - 🖼️ Mix of local and external (Pinterest) images used. 
 
 
 - **❄️ Snowglobe: "All I Want for Christmas..."**  
