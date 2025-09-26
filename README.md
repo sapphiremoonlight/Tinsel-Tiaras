@@ -21,7 +21,7 @@ Celebrate the festive season with **Tinsel & Tiara**, a cozy and interactive hol
 
 
 - **❄️ Snowglobe: "All I Want for Christmas..."**  
-  An interactive snowglobe page (GIF) that lets users listen to !["All I want for Christmas"](../all-i-want-for-christmas.mp3) by Mariah Carey.
+  An interactive snowglobe page (GIF) that lets users listen to ["All I want for Christmas"](../all-i-want-for-christmas.mp3) by Mariah Carey.
 
 - **🧑‍🎨 Themed Inspiration Pages**  
   Curated Christmas party and decor ideas for:
