@@ -1,189 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adults Oscars Christmas Party</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/oscars.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery 🎄</title>
+<link rel="icon" href="images/bow.ico" type="image/x-icon">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/gallery.css" />
 </head>
-<body class="adults-page">
+<body>
+  <!-- Navbar -->
+  	<header>
+    		<nav class="navbar">
+       	    	<div class="logo">
+           	 <img src="images/logo.png" alt="Tinsel & Tiaras Logo">
+       		 </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="gallery.html"><i class="fas fa-images"></i></a></li>
+	   <li><a href="mail.html"><i class="fas fa-envelope"></i></a></li>
+           <li><a href="snow.html"><i class="fas fa-snowflake"></i></a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Header with Navigation -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="images/logo-dark.png" alt="Christmas Family Logo">
-            </div>
-            <ul class="nav-links">
-               <li><a href="index.html"><i class="fas fa-home"></i></a></li>
-            	<li><a href="gallery.html"><i class="fas fa-images"></i></a></li>
-	   	<li><a href="mail.html"><i class="fas fa-envelope"></i></a></li>
-           	<li><a href="snow.html"><i class="fas fa-snowflake"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-<main>
-    <!-- Hero Section (Oscar Theme) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Oscars Themed Christmas Party</h1>
-            <p>Celebrate the festive season like a Hollywood star!</p>
-        </div>
-    </section>
 
-    <!-- Oscar Countdown Section -->
-    <section class="countdown">
-        <div class="countdown-timer">
-            <h2>Countdown to the Oscars Night!</h2>
-            <div id="countdown"></div>
-        </div>
-    </section>
+  <!-- Main Content (Gallery Page) -->
+  <main class="gallery-page">
+    <h1>🎄 Christmas Tree Gallery</h1>
+    <p>Click any photo to download.</p>
+	<button id="downloadAll">Download All</button>
 
-    <!-- Oscar Trophy Showcase -->
-    <section class="trophy-showcase">
-        <div class="trophy-card">
-            <i class="fas fa-trophy oscar-trophy"></i>
-            <p>Best Christmas Outfit</p>
-        </div>
-        <div class="trophy-card">
-            <i class="fas fa-trophy oscar-trophy"></i>
-            <p>Most Festive Party Spirit</p>
-        </div>
-        <div class="trophy-card">
-            <i class="fas fa-trophy oscar-trophy"></i>
-            <p>Best Christmas Dance Performance</p>
-        </div>
-    </section>
+    <div class="tree-gallery">
+      <!-- Star -->
+      <div class="tree-row star-row">
+        <img src="https://png.pngtree.com/png-vector/20241209/ourmid/pngtree-christmas-tree-topper-star-png-image_14710745.png" class="star" alt="Star at top">
+      </div>
 
-    <!-- Walk of Fame -->
-<section class="walk-of-fame">
-    <div class="walk-of-fame-content">
-        <h2>Walk of Fame</h2>
-        <p>Celebrating our shining stars!</p>
+     <!-- Tree Layers -->
+      <div class="tree-row row-1">
+        <img src="images/hanging-balls.png" alt="Hanging Balls" />
+        <img src="images/holly-plant.png" alt="Holly Plant" />
+        <img src="images/candy-cane.png" alt="Candy Cane" />
+        <img src="images/gifts.png" alt="Gifts" />
+      </div>
+
+      <div class="tree-row row-2">
+        <img src="images/snowman.png" alt="Snowman" />
+        <img src="https://i.pinimg.com/736x/93/d2/00/93d2003bf9d48a5ed7999cf134feba14.jpg" alt="Christmas Knitted Sweater" />
+        <img src="images/santa.png" alt="Santa" />
+        <img src="images/christmas-tree.png" alt="Christmas Tree" />
+        <img src="https://i.pinimg.com/1200x/c1/70/20/c17020c661240ca0111fc453f9eeadd9.jpg" alt="Snow Globe" />
+        <img src="https://i.pinimg.com/1200x/df/4d/f4/df4df44fea485c45d6cbac284424c219.jpg" alt="Hot Cocoa" />
+      </div>
+
+      <div class="tree-row row-3">
+        <img src="https://i.pinimg.com/736x/d0/dc/81/d0dc816b486081a344f6aee12753c213.jpg" alt="Santa Hat" />
+        <img src="https://i.pinimg.com/1200x/e6/cd/3f/e6cd3f43c61762800bf4f93547733570.jpg" alt="Christmas Wreath" />
+        <img src="https://i.pinimg.com/736x/0e/88/e6/0e88e6c0a96fcc541de7503f5dfb4432.jpg" alt="Gingerbread Man" />
+        <img src="https://i.pinimg.com/1200x/a3/a5/bf/a3a5bf78abb073c01650500dd5139cb1.jpg" alt="Christmas Candle" />
+        <img src="https://i.pinimg.com/736x/4b/fa/7e/4bfa7ed50cbbd1f848e5d88de3eb8362.jpg" alt="Snowflakes" />
+        <img src="https://i.pinimg.com/736x/d9/75/14/d97514f9eaa38f6a9553c4a1815fcd37.jpg" alt="Bauble Decor" />
+        <img src="https://i.pinimg.com/1200x/14/b3/4f/14b34f476363a32cdb5fa37f10ca3e9e.jpg" alt="Stocking" />
+        <img src="https://i.pinimg.com/736x/0a/43/dd/0a43dd5e0ad65c9cff0f176a0c959631.jpg" alt="Christmas Cake" />
+      </div>
+
+      <div class="tree-row row-4">
+        <img src="https://i.pinimg.com/1200x/db/cf/68/dbcf68289c85275a81bef06cab8ba351.jpg" alt="Sleigh" />
+        <img src="https://i.pinimg.com/736x/ce/e0/ea/cee0ea3740e897c277982584d84a756f.jpg" alt= "Jingle Bells" />
+        <img src="https://i.pinimg.com/1200x/e4/35/8e/e4358e3c6980433a3ae9b6e8ad14eb62.jpg" alt="Reindeer" />
+        <img src="https://i.pinimg.com/736x/05/38/e2/0538e21349c058073a07795d003191c6.jpg" alt="Stripped Bow" />
+        <img src="https://i.pinimg.com/1200x/b3/86/81/b386818ea94175155f93120c3b059101.jpg" alt="Christmas Cookies" />
+        <img src="https://i.pinimg.com/736x/1a/21/09/1a2109564633a98877e2d233447d04e8.jpg" alt="Gift2" />
+        <img src="https://i.pinimg.com/736x/77/cc/78/77cc7864b9fa9a9def5c7430b3b96000.jpg" alt="Peppermint" />
+        <img src="https://i.pinimg.com/1200x/81/69/48/8169482d93cb89379767facdc0221d82.jpg" alt="Pooh" />
+      </div>
+
+      <div class="tree-row row-5">
+        <img src="https://i.pinimg.com/1200x/9d/df/82/9ddf822cd9e5bcabfb719d7325f16f2f.jpg" alt="Present Sack" />
+        <img src="https://i.pinimg.com/736x/ef/78/63/ef7863507fcb9238f13e454c43042f92.jpg" alt="Garland" />
+        <img src="https://i.pinimg.com/736x/9a/de/c9/9adec9a3d83ba9a9c0eeb43781f69d07.jpg" alt="Christmas Mittens" />
+        <img src="https://i.pinimg.com/736x/24/24/4c/24244c3daf7e0e229c6080652d86338c.jpg" alt="Poinsettia" />
+        <img src="https://i.pinimg.com/736x/2d/89/90/2d8990a9dd935973d604efcd2f05ac4b.jpg" alt="Reindeer Headband" />
+        <img src="https://i.pinimg.com/1200x/27/63/e2/2763e26a15c64bb1bee21b834a59549c.jpg" alt="The Grinch" />
+        <img src="https://i.pinimg.com/1200x/b5/ce/5d/b5ce5dde5a779ba982d05938d18247b2.jpg" alt="Christmas Bells" />
+        <img src="https://i.pinimg.com/736x/c3/51/9f/c3519ffe732cc32d79689fe8a19e6f08.jpg" alt="Christmas Cup" />
+        <img src="https://i.pinimg.com/736x/f2/a7/8b/f2a78b2e8b452bad48bae9de1e65ed9b.jpg" alt="Gingerbread House" />
+        <img src="https://i.pinimg.com/1200x/27/33/b4/2733b4df3336638728af9a16ebea9a77.jpg" alt="Cushion" />
+      </div>
     </div>
-    <div class="walk-of-fame-gallery">
-        <div class="walk-of-fame-card">
-            <img src="images/walk-of-fame/star1.png" alt="Star 1" class="star-image">
-        </div>
-        <div class="walk-of-fame-card">
-            <img src="images/walk-of-fame/star2.png" alt="Star 2" class="star-image">
-        </div>
-        <div class="walk-of-fame-card">
-            <img src="images/walk-of-fame/star3.png" alt="Star 3" class="star-image">
-        </div>
-	<div class="walk-of-fame-card">
-            <img src="images/walk-of-fame/star3.png" alt="Star 3" class="star-image">
-        </div>
-    </div>
-</section>
+  </main>
 
-<!-- Description Section -->
-<section class="description">
-    <div class="description-content">
-        <h2>Dress Code & Theme Ideas</h2>
-        <p>For the Adults Oscars Christmas Party, get ready to shine like a Hollywood star! Whether you’re going for a dazzling red carpet look or a festive gold & black ensemble, the goal is to bring the glam and sparkle. Dress as if you’re attending the most elegant Christmas night of the year!</p>
-    </div>
-</section>
+<!-- Image Preview Overlay -->
+<div id="imagePreview" class="image-preview hidden">
+  <button id="closePreview" aria-label="Close Preview">&times;</button>
+  <img src="" alt="Preview Image" />
+</div>
 
-<section class="moodboard">
-       <!-- Oscar-Themed Moodboard -->
-    <div class="moodboard-grid">
-            <div class="moodboard-card">
-            <img src="images/oscars/ladies-1.png" alt="Women Outfit 1">
-            <p>Oscar Fit 1 (Ladies) </p>
-        </div>
-        <div class="moodboard-card">
-            <img src="images/oscars/ladies-2.png" alt="Women Outfit 2">
-            <p>Oscar Fit 2 (Ladies) </p>
-        </div>
-         <div class="moodboard-card">
-            <img src="images/oscars/ladies-3.png" alt="Women Outfit 3">
-            <p>Oscar Fit 3 (Ladies) </p>
-        </div>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tinsel & Tiara. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
 
-<div class="moodboard-grid">
-        <!-- Men Outfits -->
-       	<div class="moodboard-card">
-            <img src="images/oscars/men-4.png" alt="Men Outfit 1">
-            <p>Oscar Fit 1 (Gents) </p>
-        </div>
-        <div class="moodboard-card">
-            <img src="images/oscars/men-2.png" alt="Men Outfit 2">
-            <p>Oscar Fit 2 (Gents) </p>
-        </div>
-        <div class="moodboard-card">
-            <img src="images/oscars/men-3.png" alt="Men Outfit 3">
-            <p>Oscar Fit 3 (Gents) </p>
-        </div>
-    </div>
-</section>
-
-<section class="oscar-invitation">
-  <div class="invitation-card fade-in-up">
-    <img 
-      src="images/oscars/oscar-stamp.png" 
-      alt="Oscar Stamp" 
-      class="oscar-stamp"
-    />
-
-    <h2>You're Cordially Invited</h2>
-    <p class="invitation-text">
-      The Academy invites you to an unforgettable night of glamour and golden memories.<br><br>
-      <strong>Date:</strong> December 24, 2025<br>
-      <strong>Time:</strong> 0:00 UTC +2<br>
-      <strong>Location:</strong> Little Switzerland, Alpine Resort
-    </p>
-
-    <div class="rsvp-button">
-      <a href="#rsvp" class="button-gold">RSVP Now</a>
-    </div>
-  </div>
-</section>
-</main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Oscars Christmas Party</p>
-
-  <!-- Mobile Navigation Links (Displayed on Mobile) -->
-   <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-		<li><a href="mail.html">Santa's Archive</a></li>
-                <li><a href="snow.html">Globe</a></li>
-     </ul>
-    </footer>
-
-    <script>
-        // Countdown Timer JavaScript (Counts down to the Oscars)
-        function startCountdown() {
-            var oscarDate = new Date("Dec 25, 2025 20:00:00").getTime();  // Set time for Oscars night
-            var countdownInterval = setInterval(function() {
-                var currentTime = new Date().getTime();
-                var timeLeft = oscarDate - currentTime;
-
-                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                document.getElementById("countdown").innerHTML = 
-                    `<span class="countdown-time">${days}</span>d 
-                    <span class="countdown-time">${hours}</span>h 
-                    <span class="countdown-time">${minutes}</span>m 
-                    <span class="countdown-time">${seconds}</span>s`;
-
-                if (timeLeft < 0) {
-                    clearInterval(countdownInterval);
-                    document.getElementById("countdown").innerHTML = "The Oscars are here!";
-                }
-            }, 1000);
-        }
-        startCountdown();
-    </script>
+  <!-- JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
