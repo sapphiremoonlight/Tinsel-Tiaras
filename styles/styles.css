@@ -308,72 +308,6 @@ footer {
 }
 
 /* ============================================== 
-RESPONSIVE DESIGN
-============================================== */
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        padding: 15px;
-    }
-
-    .nav-links {
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    .nav-links a i {
-        font-size: 24px;
-    }
-
-    .countdown-time {
-        font-size: 4rem;
-    }
-
-    .themes, .moodboard {
-        flex-direction: column;
-        padding: 20px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .nav-links {
-        width: 50%;
-        justify-content: space-between;
-    }
-
-    .nav-links a i {
-        font-size: 18px;
-    }
-
-    .intro-text h1 {
-        font-size: 2rem;
-    }
-
-    .intro-text p {
-        font-size: 1rem;
-    }
-
-    .countdown-time {
-        font-size: 2.5rem;
-        padding: 10px;
-        margin: 0 5px;
-    }
-
-    .moodboard-card {
-        width: 90%;
-        height: auto;
-    }
-
-    .moodboard-card img {
-        height: 150px;
-    }
-
-    .moodboard-card p {
-        font-size: 1rem;
-    }
-}
-
-/* ============================================== 
 					ANIMATIONS
 ============================================== */
 @keyframes fadeInUp {
@@ -385,4 +319,272 @@ RESPONSIVE DESIGN
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+/* ============================================== 
+🎉 YOUTH INVITATION
+============================================== */
+.youth-invitation {
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.youth-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid #08FF08;
+  padding: 50px 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  color: #fff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.youth-card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.4rem;
+  color: #08FF08;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #08FF08;
+}
+
+.youth-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.button-neon {
+  background: #08FF08;
+  color: #1a1a1a;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #08FF08, 0 0 30px #08FF08;
+}
+
+.button-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #08FF08, 0 0 40px #08FF08;
+}
+
+/* ============================================== 
+🌈 KIDS INVITATION
+============================================== */
+.kids-invitation {
+  background: linear-gradient(to bottom, #fceabb, #f8b500);
+  padding: 70px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.kids-card {
+  background: #ffffffcc;
+  border: 3px dashed #ff69b4;
+  padding: 40px 30px;
+  border-radius: 25px;
+  max-width: 550px;
+  color: #3a2e28;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.magic-icon {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.kids-card h2 {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.8rem;
+  color: #ff69b4;
+  margin-bottom: 15px;
+}
+
+.kids-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.button-sparkle {
+  background: #ff69b4;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.button-sparkle:hover {
+  background: #ff85c1;
+  transform: scale(1.05);
+}
+
+/* Font for kids section (Comic Neue) — include in HTML <head> */
+
+
+/* ============================================== 
+📱 RESPONSIVE DESIGN ENHANCEMENTS
+============================================== */
+
+/* Tablets and Medium Screens */
+@media screen and (max-width: 1024px) {
+  .themes,
+  .moodboard {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .theme-card,
+  .moodboard-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .moodboard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .countdown-time {
+    font-size: 4rem;
+    padding: 15px;
+  }
+
+  .intro-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Phones and Smaller Devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-links a i {
+    font-size: 22px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .theme-card,
+  .moodboard-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .theme-card img,
+  .moodboard-card img {
+    height: auto;
+    max-height: 180px;
+  }
+
+  .countdown-time {
+    font-size: 3rem;
+    padding: 12px;
+  }
+
+  .description-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .description-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices (Phones under 480px) */
+@media screen and (max-width: 480px) {
+  .hero {
+    padding: 10px;
+    height: auto;
+  }
+
+  .intro-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro-text p {
+    font-size: 0.95rem;
+  }
+
+  .nav-links a i {
+    font-size: 18px;
+  }
+
+  .theme-card {
+    width: 95%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+ .moodboard-card {
+    width: 95%;
+    height: auto;
+    margin: 5px auto;
+}
+
+.moodboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+  .theme-card p,
+  .moodboard-card p {
+    font-size: 0.95rem;
+  }
+
+  .countdown-time {
+    font-size: 2.5rem;
+    padding: 8px;
+  }
+
+  .description-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .description-content p {
+    font-size: 0.95rem;
+  }
 }
