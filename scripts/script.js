@@ -1,4 +1,15 @@
-// Wait for DOM
+// Helper: Sanitize file names
+function sanitizeFilename(name) {
+  return name.replace(/[<>:"/\\|?*]+/g, '').replace(/\s+/g, '_');
+}
+
+// Get file extension
+function getExtension(url) {
+  const match = url.match(/\.(jpg|jpeg|png|gif|webp|svg)/i);
+  return match ? match[0] : '.png';
+}
+
+// DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   const zipBtn = document.getElementById('downloadAll');
   const images = document.querySelectorAll('.tree-gallery img');
@@ -6,28 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const previewImage = imagePreview.querySelector('img');
   const closeBtn = document.getElementById('closePreview');
 
-  // === Show preview on single click, download on double click ===
+  // Single click: preview
   images.forEach(img => {
     img.style.cursor = 'pointer';
-
-    // Single click: show preview
     img.addEventListener('click', () => {
       previewImage.src = img.src;
       previewImage.alt = img.alt || 'Preview Image';
       imagePreview.classList.remove('hidden');
     });
 
-    // Double click: download image
+    // Double click: download
     img.addEventListener('dblclick', () => {
-      downloadImage(img.src, img.alt || 'image');
+      const link = document.createElement('a');
+      link.href = img.src;
+      link.download = sanitizeFilename(img.alt || 'image') + getExtension(img.src);
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
     });
   });
 
-  // Close preview handlers
+  // Close preview
   closeBtn.addEventListener('click', () => {
     imagePreview.classList.add('hidden');
     previewImage.src = '';
-    previewImage.alt = '';
   });
 
   imagePreview.addEventListener('click', e => {
@@ -42,90 +55,61 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-
-  // Download All Button functionality
+  // Download All
   zipBtn.addEventListener('click', async () => {
-    zipBtn.disabled = true;
-    zipBtn.textContent = 'Preparing...';
-
     const JSZip = window.JSZip;
     const zip = new JSZip();
     const folder = zip.folder('christmas-tree-gallery');
 
-    try {
-      for (const img of images) {
-        const url = img.src;
-        const filename = sanitizeFilename(img.alt || 'image') + getExtension(url);
+    zipBtn.disabled = true;
+    zipBtn.textContent = 'Preparing...';
 
-        const blob = await fetch(url).then(res => {
-          if (!res.ok) throw new Error(Failed to fetch ${url});
-          return res.blob();
-        });
+    let successCount = 0;
+    let failCount = 0;
 
-        folder.file(filename, blob);
+    for (const img of images) {
+      const url = img.src;
+
+      // Only allow downloading same-origin images
+      if (!url.startsWith(window.location.origin) && !url.startsWith('images/')) {
+        failCount++;
+        continue;
       }
 
-      const content = await zip.generateAsync({ type: 'blob' });
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Fetch failed');
 
-      // Trigger download
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(content);
-      link.download = 'christmas-tree-gallery.zip';
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
+        const blob = await res.blob();
+        const filename = sanitizeFilename(img.alt || 'image') + getExtension(url);
 
-    } catch (error) {
-      alert('Error downloading images: ' + error.message);
-    } finally {
-      zipBtn.disabled = false;
-      zipBtn.textContent = 'Download All';
+        folder.file(filename, blob);
+        successCount++;
+      } catch (err) {
+        console.warn(`Failed to fetch ${url}: ${err}`);
+        failCount++;
+      }
     }
+
+    if (successCount === 0) {
+      alert('Download failed. Images may be blocked by CORS.');
+    } else {
+      try {
+        const blob = await zip.generateAsync({ type: 'blob' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'christmas-tree-gallery.zip';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        alert(`Download complete! ${successCount} image(s) downloaded. ${failCount} skipped.`);
+      } catch (err) {
+        alert('Error generating ZIP: ' + err.message);
+      }
+    }
+
+    zipBtn.disabled = false;
+    zipBtn.textContent = 'Download All';
   });
-
-  // Helper to download a single image
-  function downloadImage(url, name) {
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = sanitizeFilename(name) + getExtension(url);
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  }
-
-  // Helper to get extension from URL
-  function getExtension(url) {
-    const match = url.match(/\.(jpg|jpeg|png|gif|webp|bmp|svg)(\?|$)/i);
-    return match ? match[0] : '.jpg';
-  }
-
-  // Sanitize filename to remove invalid characters
-  function sanitizeFilename(name) {
-    return name.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-  }
 });
-
-  if (successCount === 0) {
-    alert('Download failed. All image fetches failed due to CORS or network errors.');
-  } else {
-    try {
-      const content = await zip.generateAsync({ type: 'blob' });
-
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(content);
-      link.download = 'christmas-tree-gallery.zip';
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-
-      alert(`Download ready! ${successCount} image(s) downloaded. ${failCount} failed.`);
-    } catch (zipError) {
-      alert('Error generating ZIP: ' + zipError.message);
-    }
-  }
-
-  zipBtn.disabled = false;
-  zipBtn.textContent = 'Download All';
-});
-
-
